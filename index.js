@@ -3,10 +3,7 @@ const rp = require('request-promise');
 var requests = require('./requests')();
 
 console.log(requests);
-const API_KEY = "AIzaSyCQGWVQZe_UXzK4lcClXVBiXxTmsQaUkpQ";
-//curl -v -s -H "Content-Type: application/json" \
-//    https://vision.googleapis.com/v1/images:annotate?key=API_KEY \
-//    --data-binary @request.json
+const API_KEY = process.env.API_KEY;
 
 var requestParams = {
   method: "POST",
