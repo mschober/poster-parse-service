@@ -1,0 +1,27 @@
+module.exports = function() {
+  var requests = {
+    "requests": [
+      {
+        "image": {
+          "source": {
+            "imageUri": "https://cloud.google.com/vision/images/rushmore.jpg"
+          }
+        },
+        "features": [
+          {
+            "type": "LANDMARK_DETECTION",
+            "maxResults": 1
+          },
+          {
+            "type": "WEB_DETECTION",
+            "maxResults": 2
+          }
+        ]
+      }
+    ]
+  };
+  
+  return {
+    requests: requests.requests
+  }
+}
