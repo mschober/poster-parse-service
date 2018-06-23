@@ -4,14 +4,12 @@ var requests = require('./requests')();
 const { SecretsManager } = require('./lib')();
 const secretsManager = new SecretsManager();
 
-const API_KEY = process.env.API_KEY;
-
 module.exports.post = (req, context, res) => {
   var requestParams = {
     method: "POST",
     url: "https://vision.googleapis.com/v1/images:annotate",
     qs: {
-      key: API_KEY
+      key: "<replace with secrets>"
     },
     json: true,
     body: requests
@@ -24,11 +22,11 @@ module.exports.post = (req, context, res) => {
   })
   .then(rp)
   .then(resp => {
-    console.log(resp);
+    console.log(JSON.stringify(resp));
     var response = {
       statusCode: 200,
       headers: {},
-      body: resp
+      body: JSON.stringify(resp)
     }
     return response;
   })
