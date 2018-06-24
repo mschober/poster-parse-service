@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/language": "^1.2.0",
     "aws-sdk": "^2.263.1",
     "aylien_textapi": "^0.7.0",
     "request": "^2.87.0",

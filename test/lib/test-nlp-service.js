@@ -45,4 +45,63 @@ describe('nlp service', () => {
       assert.deepEqual(resp, expected);
     })
   })
+  
+  it('should analyze a document', () => {
+    var nlpService = new NlpService();
+    var expected = {
+        "entities": [
+          {
+            "mentions": [
+              {
+                "text": {
+                  "beginOffset": -1,
+                  "content": "text"
+                },
+                "type": "COMMON"
+              }
+            ],
+            "metadata": {},
+            "name": "text",
+            "salience": 0.6877991,
+            "type": "OTHER"
+          },
+          {
+            "mentions": [
+              {
+                "text": {
+                  "beginOffset": -1,
+                  "content": "Coffee shop"
+                },
+                "type": "COMMON"
+              }
+            ],
+            "metadata": {},
+            "name": "Coffee shop",
+            "salience": 0.18818863,
+            "type": "LOCATION"
+          },
+          {
+            "mentions": [
+              {
+                "text": {
+                  "beginOffset": -1,
+                  "content": "Michael Schober"
+                },
+                "type": "PROPER"
+              }
+            ],
+            "metadata": {},
+            "name": "Michael Schober",
+            "salience": 0.124012254,
+            "type": "PERSON"
+          }
+        ],
+        "language": "en"
+      }
+    
+    return nlpService.analyzeText( { text: "some text is here with Michael Schober at The Den Coffee shop by Tuesday at 11:00"})
+    .then(resp => {
+      assert.deepEqual(resp, expected);
+    })
+  })
 })

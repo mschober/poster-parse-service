@@ -1,3 +1,5 @@
 {
-  "SECRETS_MANAGER_VISION_API_KEY": "arn:aws:secretsmanager:us-west-2:978827054691:secret:services/google/visionapi-dPHLUC"
+  "SECRETS_MANAGER_VISION_API_KEY_ARN": "arn:aws:secretsmanager:us-west-2:978827054691:secret:services/google/visionapi-dPHLUC",
+  "SECRETS_MANAGER_GOOGLE_NLP_API_KEY_ARN": "arn:aws:secretsmanager:us-west-2:978827054691:secret:services/google/naturallanguage-3nTAL8",
+  "SECRETS_MANAGER_IBM_NLP_API_KEY_ARN": "arn:aws:secretsmanager:us-west-2:978827054691:secret:services/ibm/aylien-ukSdcj"
 }
