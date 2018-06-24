@@ -24,6 +24,9 @@ module.exports.post = (req, context, res) => {
 //    return nlpService.articleExtraction({html: html}); 
 //  })
   .then(resp => {
+    return nlpService.analyzeText({ text: resp });
+  })
+  .then(resp => {
     console.log(JSON.stringify(resp));
     var response = {
       statusCode: 200,
