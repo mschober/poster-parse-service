@@ -10,9 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.263.1",
+    "aylien_textapi": "^0.7.0",
     "request": "^2.87.0",
     "request-promise": "^4.2.2",
     "serverless-mocha-plugin": "^1.8.3",
     "serverless-offline": "^3.25.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2"
   }
 }

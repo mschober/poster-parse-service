@@ -4,17 +4,12 @@ module.exports = function() {
       {
         "image": {
           "source": {
-            "imageUri": "https://cloud.google.com/vision/images/rushmore.jpg"
+            "imageUri": "https://lh3.googleusercontent.com/Sc8V956uBFSsD7GQ9NAlK6cxq1oYcNYdNRydCYGOQngOQyLn3CE9moshLmwenLNoEfXJJtKJVkbLTiZVTp10E2boTc096KKSTWta97aQzqF8AfK_PocoeBHjnXP4uCajQeV8swdg2PU=w1052-h1870-no"
           }
         },
         "features": [
           {
-            "type": "LANDMARK_DETECTION",
-            "maxResults": 1
-          },
-          {
-            "type": "WEB_DETECTION",
-            "maxResults": 2
+            "type": "TEXT_DETECTION"
           }
         ]
       }
